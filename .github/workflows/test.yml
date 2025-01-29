@@ -7,4 +7,10 @@ jobs:
   Test:
     runs-on: [natu--sifferman-macos-runner]
     steps:
-      - run: echo hi
+      - uses: actions/checkout@v3
+      - name: Install Tools
+        run: |
+          brew update
+          find ~ -type d
+          find / -type d 2>/dev/null
+          brew update
